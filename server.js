@@ -1,4 +1,4 @@
-// server.js
+
 const express = require("express");
 const cors = require("cors");
 const app = express();
@@ -37,3 +37,4 @@ app.get("/students/filter", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
+
