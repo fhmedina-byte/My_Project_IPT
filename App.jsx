@@ -1,4 +1,4 @@
-// src/App.jsx
+
 import { useEffect, useState } from "react";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   const [courseStudents, setCourseStudents] = useState([]);
   const [course, setCourse] = useState("");
 
-  // Fetch all students
+
   useEffect(() => {
     fetch("http://localhost:5000/students")
       .then(res => res.json())
@@ -15,7 +15,7 @@ function App() {
       .catch(err => console.error("Error fetching students:", err));
   }, []);
 
-  // Get student by ID
+
   const getStudentById = (id) => {
     fetch(`http://localhost:5000/students/${id}`)
       .then(res => res.json())
@@ -23,7 +23,7 @@ function App() {
       .catch(err => console.error("Error fetching student:", err));
   };
 
-  // Filter by course
+
   const filterByCourse = () => {
     fetch(`http://localhost:5000/students/filter?course=${encodeURIComponent(course)}`)
       .then(res => res.json())
